@@ -9,7 +9,7 @@ define(function (require) {
 
     var config = {
         title: "Angular admin",
-        baseApiUrl: "http://localhost:3000/",
+        baseApiUrl: "http://localhost:8080/",
         headers: defaultHeaders
     };
 

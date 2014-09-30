@@ -22,6 +22,7 @@
     "grunt-contrib-requirejs": "^0.4.4",
     "grunt-contrib-uglify": "~0.6.0",
     "grunt-contrib-watch": "~0.5.2",
+    "grunt-json-server": "^0.1.1",
     "grunt-karma": "^0.8.3",
     "grunt-ng-annotate": "^0.4.0",
     "jshint-stylish": "~0.1.3",

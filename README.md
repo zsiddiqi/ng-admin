@@ -34,7 +34,7 @@ app.config(function(NgAdminConfigurationProvider, Application, Entity, Field, Re
     // See below for more information about the configuration
 
     var app = new Application('My backend')
-        .baseApiUrl('http://localhost:3000/')
+        .baseApiUrl('http://localhost:8080/')
         .addEntity(/* ... */)
 
     NgAdminConfigurationProvider.configure(app);
@@ -55,7 +55,7 @@ Here is a full example for a backend that will let you create, update, delete so
 Those posts can be tagged (`tags` entity) and commented (`comments` entity).
 
 ```js
-app.config(function(NgAdminConfigurationProvider, Application, Entity, 
+app.config(function(NgAdminConfigurationProvider, Application, Entity,
     Field, Reference, ReferencedList, ReferenceMany) {
 
     var postBody, postId;
@@ -207,7 +207,7 @@ app.config(function(NgAdminConfigurationProvider, Application, Entity,
                 'X-Password': 'pwd'
             }
         }
-        .baseApiUrl('http://localhost:3000/')
+        .baseApiUrl('http://localhost:8080/')
         .addEntity(post)
         .addEntity(comment)
         .addEntity(tag);

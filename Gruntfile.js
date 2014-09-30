@@ -98,9 +98,23 @@ module.exports = function (grunt) {
             }
         },
 
+        json_server: {
+            custom_options: {
+                options: {
+                    // Task-specific options go here.
+                    port: 8080,
+                    db: 'db.json'
+                },
+                your_target: {
+                // Target-specific file lists and/or options go here.
+                }
+            }
+        },
+
         concurrent: {
             assets_all_dev: ['requirejs:dev', 'compass:dev'],
-            connect_watch: ['connect', 'watch']
+            connect_watch: ['connect', 'watch', 'json_server' ],
+            options: { limit: 5, logConcurrentOutput: true }
         }
     });
 
@@ -117,6 +131,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-ng-annotate');
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-karma');
+    grunt.loadNpmTasks('grunt-json-server');
 
     // register tasks
     grunt.registerTask('test', ['karma']);

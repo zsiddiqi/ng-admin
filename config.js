@@ -156,7 +156,7 @@
             )
             .addField(new Field('body')
                 .label('Body')
-                .type('text')
+                .type('wysiwyg')
                 .edition('editable')
                 .truncateList(truncate)
             )
@@ -181,3 +181,4 @@
         NgAdminConfigurationProvider.configure(app);
     })
 })();
+
